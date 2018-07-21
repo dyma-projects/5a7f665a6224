@@ -6,11 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercice1.component.css']
 })
 export class Exercice1Component implements OnInit {
-  public compteur: number = 0; 
+  public compteur: number = 43; 
+  public result: number;
 
   constructor() { }
 
   ngOnInit() {
+    this.result = this.compteur;
   }
 
+  modifCpt(compteur: number): void {
+    console.log('dans modifCpt !!!')
+    this.result = compteur;
+  }
 }
